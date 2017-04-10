@@ -22,16 +22,20 @@ version = "1.10.2-1.5.9.GCPatch1"
 group= "ca.rivas.roguelike" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "RoguelikeDungeons"
 
-sourceCompatibility = targetCompatibility = "1.6" // Need this here so eclipse task generates correctly.
-compileJava {
-    sourceCompatibility = targetCompatibility = "1.6"
-}
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
 
 minecraft {
-    version = "1.10.2-12.18.3.2185"
+    version = "1.10.2-12.18.3.2254"
     runDir = "run"
-	mappings = "snapshot_20161111"
-	makeObfSourceJar = false
+    
+    // the mappings can be changed at any time, and must be in the following format.
+    // snapshot_YYYYMMDD   snapshot are built nightly.
+    // stable_#            stables are built at the discretion of the MCP team.
+    // Use non-default mappings at your own risk. they may not always work.
+    // simply re-run your setup task after changing the mappings to update your workspace.
+    mappings = "snapshot_20161111"
+    // makeObfSourceJar = false // an Srg named sources jar is made by default. uncomment this to disable.
 }
 
 dependencies {
