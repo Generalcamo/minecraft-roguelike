@@ -14,10 +14,12 @@ import net.minecraft.entity.monster.ZombieType;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.common.registry.VillagerRegistry;
 import net.minecraftforge.fml.common.registry.VillagerRegistry.VillagerProfession;
+import vazkii.quark.world.entity.EntityAshen;
+import vazkii.quark.world.entity.EntityDweller;
 
 public enum MobType {
 	
-	ZOMBIE, ZOMBIEVILLAGER, HUSK, SKELETON, STRAY, SPIDER, CREEPER, WITHERSKELETON, PIGZOMBIE, WITCH;
+	ZOMBIE, ZOMBIEVILLAGER, HUSK, SKELETON, STRAY, SPIDER, CREEPER, WITHERSKELETON, PIGZOMBIE, WITCH, ASHEN, DWELLER;
 	
 	
 	@SuppressWarnings("deprecation")
@@ -47,6 +49,8 @@ public enum MobType {
 			return wither;
 		case PIGZOMBIE: return new EntityPigZombie(world);
 		case WITCH: return new EntityWitch(world);
+		case ASHEN: return new EntityAshen(world);
+		case DWELLER: return new EntityDweller(world);
 		
 		default: return new EntityZombie(world);
 		}

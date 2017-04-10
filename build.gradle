@@ -5,14 +5,20 @@ buildscript {
             name = "forge"
             url = "http://files.minecraftforge.net/maven"
         }
+		maven {
+			name = "ic2"
+			url = "http://maven.ic2.player.to/"
+		}
     }
     dependencies {
         classpath 'net.minecraftforge.gradle:ForgeGradle:2.2-SNAPSHOT'
+        classpath files('libs/industrialcraft-2-2.6.195-ex110-api.jar', 'libs/Quark-r1.1-70.jar')
+		classpath fileTree(dir: 'libs', include: '*.jar')
     }
 }
 apply plugin: 'net.minecraftforge.gradle.forge'
 
-version = "1.10.2-1.5.9"
+version = "1.10.2-1.5.9.GCPatch1"
 group= "ca.rivas.roguelike" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "RoguelikeDungeons"
 

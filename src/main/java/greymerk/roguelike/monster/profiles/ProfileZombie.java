@@ -47,6 +47,11 @@ public class ProfileZombie implements IMonsterProfile {
 			MonsterProfile.get(MonsterProfile.HUSK).addEquipment(world, rand, level, mob);
 			return;
 		}
+
+		if(level > 2 && rand.nextInt(20) == 0){
+			MonsterProfile.get(MonsterProfile.DWELLER).addEquipment(world, rand, level, mob);
+			return;
+		}
 		
 		if(level < 3 && rand.nextInt(20) == 0){
 			MonsterProfile.get(MonsterProfile.VILLAGER).addEquipment(world, rand, level, mob);

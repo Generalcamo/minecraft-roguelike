@@ -4,7 +4,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 
-public enum PotionEffect {
+public enum PotionEffect2 {
 	
 	SPEED(1), SLOWNESS(2), HASTE(3), FATIGUE(4), STRENGTH(5), HEALTH(6), DAMAGE(7), JUMP(8), 
 	NAUSIA(9), REGEN(10), RESISTANCE(11), FIRERESIST(12), WATERBREATH(13), INVISIBILITY(14),
@@ -15,15 +15,15 @@ public enum PotionEffect {
 	public static int TICKS_PER_SECOND = 20;
 	
 	private int id;
-	PotionEffect(int id){
+	PotionEffect2(int id){
 		this.id = id;
 	}
 	
-	public static int getEffectID(PotionEffect type){
+	public static int getEffectID(PotionEffect2 type){
 		return type.id;
 	}
 	
-	public static void addCustomEffect(ItemStack potion, PotionEffect type, int amplifier, int duration){
+	public static void addCustomEffect(ItemStack potion, PotionEffect2 type, int amplifier, int duration){
 		
 		final String CUSTOM = "CustomPotionEffects";
 		

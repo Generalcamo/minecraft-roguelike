@@ -10,7 +10,7 @@ import greymerk.roguelike.util.WeightedRandomizer;
 
 public enum Quality{
 	
-	WOOD, STONE, IRON, GOLD, DIAMOND;
+	WOOD, STONE, BRONZE, IRON, STEEL, GOLD, DIAMOND;
 	
 	private static Map<Integer, IWeighted<Quality>> armourQuality;
 	private static Map<Integer, IWeighted<Quality>> weaponQuality;
@@ -26,35 +26,45 @@ public enum Quality{
 			case 0:
 				armour.add(new WeightedChoice<Quality>(WOOD, 250));
 				armour.add(new WeightedChoice<Quality>(STONE, 50));
+				armour.add(new WeightedChoice<Quality>(BRONZE, 35));
 				armour.add(new WeightedChoice<Quality>(IRON, 20));
+				armour.add(new WeightedChoice<Quality>(STEEL, 10));
 				armour.add(new WeightedChoice<Quality>(GOLD, 3));
 				armour.add(new WeightedChoice<Quality>(DIAMOND, 1));
 				break;
 			case 1:
 				armour.add(new WeightedChoice<Quality>(WOOD, 150));
 				armour.add(new WeightedChoice<Quality>(STONE, 30));
+				armour.add(new WeightedChoice<Quality>(BRONZE, 20));
 				armour.add(new WeightedChoice<Quality>(IRON, 10));
+				armour.add(new WeightedChoice<Quality>(STEEL, 5));
 				armour.add(new WeightedChoice<Quality>(GOLD, 3));
 				armour.add(new WeightedChoice<Quality>(DIAMOND, 1));
 				break;
 			case 2:
 				armour.add(new WeightedChoice<Quality>(WOOD, 50));
 				armour.add(new WeightedChoice<Quality>(STONE, 30));
+				armour.add(new WeightedChoice<Quality>(BRONZE, 25));
 				armour.add(new WeightedChoice<Quality>(IRON, 20));
+				armour.add(new WeightedChoice<Quality>(STEEL, 10));
 				armour.add(new WeightedChoice<Quality>(GOLD, 3));
 				armour.add(new WeightedChoice<Quality>(DIAMOND, 1));
 				break;
 			case 3:
 				armour.add(new WeightedChoice<Quality>(WOOD, 20));
 				armour.add(new WeightedChoice<Quality>(STONE, 10));
+				armour.add(new WeightedChoice<Quality>(BRONZE, 15));
 				armour.add(new WeightedChoice<Quality>(IRON, 10));
+				armour.add(new WeightedChoice<Quality>(STEEL, 5));
 				armour.add(new WeightedChoice<Quality>(GOLD, 5));
 				armour.add(new WeightedChoice<Quality>(DIAMOND, 3));
 				break;
 			case 4:
 				armour.add(new WeightedChoice<Quality>(WOOD, 2));
 				armour.add(new WeightedChoice<Quality>(STONE, 3));
+				armour.add(new WeightedChoice<Quality>(BRONZE, 5));
 				armour.add(new WeightedChoice<Quality>(IRON, 10));
+				armour.add(new WeightedChoice<Quality>(STEEL, 5));
 				armour.add(new WeightedChoice<Quality>(GOLD, 3));
 				armour.add(new WeightedChoice<Quality>(DIAMOND, 3));
 				break;
@@ -167,9 +177,11 @@ public enum Quality{
 		switch(level){
 		case 0: return Quality.WOOD;
 		case 1: return Quality.STONE;
-		case 2: return Quality.IRON;
-		case 3: return Quality.GOLD;
-		case 4: return Quality.DIAMOND;
+		case 2: return Quality.BRONZE;
+		case 3: return Quality.IRON;
+		case 4: return Quality.STEEL;
+		case 5: return Quality.GOLD;
+		case 6: return Quality.DIAMOND;
 		default: return Quality.WOOD;
 		}
 	}

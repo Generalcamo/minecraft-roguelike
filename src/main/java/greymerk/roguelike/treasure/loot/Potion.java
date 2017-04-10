@@ -88,7 +88,7 @@ public enum Potion {
 				return PotionTypes.LONG_FIRE_RESISTANCE;
 			} else {
 				return PotionTypes.FIRE_RESISTANCE;
-			} 
+			}
 		default: return PotionTypes.AWKWARD;
 		}
 	}

@@ -2,29 +2,17 @@ package greymerk.roguelike.monster;
 
 import java.util.Random;
 
-import greymerk.roguelike.monster.profiles.ProfileArcher;
-import greymerk.roguelike.monster.profiles.ProfileAshlea;
-import greymerk.roguelike.monster.profiles.ProfileBaby;
-import greymerk.roguelike.monster.profiles.ProfileHusk;
-import greymerk.roguelike.monster.profiles.ProfileMagicArcher;
-import greymerk.roguelike.monster.profiles.ProfilePigman;
-import greymerk.roguelike.monster.profiles.ProfilePoisonArcher;
-import greymerk.roguelike.monster.profiles.ProfileRleahy;
-import greymerk.roguelike.monster.profiles.ProfileSkeleton;
-import greymerk.roguelike.monster.profiles.ProfileSwordsman;
-import greymerk.roguelike.monster.profiles.ProfileTallMob;
-import greymerk.roguelike.monster.profiles.ProfileVillager;
-import greymerk.roguelike.monster.profiles.ProfileWitch;
-import greymerk.roguelike.monster.profiles.ProfileWither;
-import greymerk.roguelike.monster.profiles.ProfileZombie;
+import greymerk.roguelike.monster.profiles.*;
 import net.minecraft.entity.monster.EntitySkeleton;
 import net.minecraft.entity.monster.EntityZombie;
 import net.minecraft.world.World;
+import vazkii.quark.world.entity.EntityAshen;
+import vazkii.quark.world.entity.EntityDweller;
 
 public enum MonsterProfile {
 
 	TALLMOB, ZOMBIE, PIGMAN, SKELETON, VILLAGER, HUSK, BABY, ASHLEA, RLEAHY, 
-	ARCHER, WITHER, POISONARCHER, MAGICARCHER, SWORDSMAN, WITCH;
+	ARCHER, WITHER, POISONARCHER, MAGICARCHER, SWORDSMAN, WITCH, ASHEN, DWELLER;
 	
 	public static IMonsterProfile get(MonsterProfile profile){
 		switch(profile){
@@ -43,6 +31,8 @@ public enum MonsterProfile {
 		case MAGICARCHER: return new ProfileMagicArcher();
 		case SWORDSMAN: return new ProfileSwordsman();
 		case WITCH: return new ProfileWitch();
+		case ASHEN: return new ProfileAshen();
+		case DWELLER: return new ProfileDweller();
 		default: return new ProfileTallMob();
 		}
 	}
@@ -54,6 +44,10 @@ public enum MonsterProfile {
 		if(mob.instance(EntityZombie.class)) profile = get(ZOMBIE);
 		
 		if(mob.instance(EntitySkeleton.class)) profile = get(SKELETON);
+
+		if(mob.instance(EntityAshen.class)) profile = get(ASHEN);
+
+		if(mob.instance(EntityDweller.class)) profile = get(DWELLER);
 		
 		if(profile == null) return;
 		

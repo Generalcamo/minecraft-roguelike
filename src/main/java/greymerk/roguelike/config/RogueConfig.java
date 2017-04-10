@@ -66,7 +66,7 @@ public enum RogueConfig {
 		default: return null;
 		}
 	}
-	
+
 	@SuppressWarnings("unchecked")
 	private static void setDefaults(){
 		if(!instance.ContainsKey(getName(DONATURALSPAWN))) setBoolean(DONATURALSPAWN, (Boolean)getDefault(DONATURALSPAWN).getSecond());

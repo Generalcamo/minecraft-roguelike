@@ -2,9 +2,13 @@ package greymerk.roguelike.treasure.loot;
 
 import java.util.Random;
 
+import com.google.common.collect.ImmutableSet;
 import net.minecraft.init.Items;
+import net.minecraft.init.MobEffects;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.potion.PotionUtils;
+import net.minecraft.potion.PotionEffect;
 
 public class TippedArrow {
 
@@ -43,6 +47,13 @@ public class TippedArrow {
 		arrow.setTagCompound(nbt);
 		
 		return arrow;
+	}
+
+	public static ItemStack get(int amount){
+		ItemStack stack = new ItemStack(Items.TIPPED_ARROW, amount);
+		PotionUtils.appendEffects(stack, ImmutableSet.of(new PotionEffect(MobEffects.BLINDNESS, 50, 0)));
+
+		return stack;
 	}
 	
 	public static ItemStack getHarmful(Random rand, int amount){

@@ -20,19 +20,19 @@ public enum PotionMixture {
 		switch(type){
 		case TEQUILA:
 			potion = Potion.getSpecific(PotionType.REGULAR, null, false, false);
-			PotionEffect.addCustomEffect(potion, PotionEffect.STRENGTH, 3, 30 + rand.nextInt(60));
-			PotionEffect.addCustomEffect(potion, PotionEffect.FATIGUE, 1, 30 + rand.nextInt(60));
+			PotionEffect2.addCustomEffect(potion, PotionEffect2.STRENGTH, 3, 30 + rand.nextInt(60));
+			PotionEffect2.addCustomEffect(potion, PotionEffect2.FATIGUE, 1, 30 + rand.nextInt(60));
 			Loot.setItemName(potion, "Tequila");
 			ItemHideFlags.set(ItemHideFlags.EFFECTS, potion);
 			setColor(potion, DyeColor.RGBToColor(255, 232, 196));
 			return potion;
 		case LAUDANUM:
 			potion = Potion.getSpecific(PotionType.REGULAR, null, false, false);
-			PotionEffect.addCustomEffect(potion, PotionEffect.REGEN, 3, 8);
-			PotionEffect.addCustomEffect(potion, PotionEffect.WEAKNESS, 2, 5);
-			PotionEffect.addCustomEffect(potion, PotionEffect.SLOWNESS, 2, 5);
-			PotionEffect.addCustomEffect(potion, PotionEffect.FATIGUE, 2, 5);
-			PotionEffect.addCustomEffect(potion, PotionEffect.NAUSIA, 1, 5);
+			PotionEffect2.addCustomEffect(potion, PotionEffect2.REGEN, 3, 8);
+			PotionEffect2.addCustomEffect(potion, PotionEffect2.WEAKNESS, 2, 5);
+			PotionEffect2.addCustomEffect(potion, PotionEffect2.SLOWNESS, 2, 5);
+			PotionEffect2.addCustomEffect(potion, PotionEffect2.FATIGUE, 2, 5);
+			PotionEffect2.addCustomEffect(potion, PotionEffect2.NAUSIA, 1, 5);
 			Loot.setItemName(potion, "Laudanum");
 			Loot.setItemLore(potion, "A medicinal tincture.");
 			ItemHideFlags.set(ItemHideFlags.EFFECTS, potion);
@@ -40,18 +40,18 @@ public enum PotionMixture {
 			return potion;
 		case MOONSHINE:
 			potion = Potion.getSpecific(PotionType.REGULAR, null, false, false);
-			PotionEffect.addCustomEffect(potion, PotionEffect.DAMAGE, 1, 1);
-			PotionEffect.addCustomEffect(potion, PotionEffect.BLINDNESS, 1, 30 + rand.nextInt(60));
-			PotionEffect.addCustomEffect(potion, PotionEffect.RESISTANCE, 2, 30 + rand.nextInt(30));
+			PotionEffect2.addCustomEffect(potion, PotionEffect2.DAMAGE, 1, 1);
+			PotionEffect2.addCustomEffect(potion, PotionEffect2.BLINDNESS, 1, 30 + rand.nextInt(60));
+			PotionEffect2.addCustomEffect(potion, PotionEffect2.RESISTANCE, 2, 30 + rand.nextInt(30));
 			Loot.setItemName(potion, "Moonshine");
 			ItemHideFlags.set(ItemHideFlags.EFFECTS, potion);
 			setColor(potion, DyeColor.RGBToColor(250, 240, 230));
 			return potion;
 		case ABSINTHE:
 			potion = Potion.getSpecific(PotionType.REGULAR, null, false, false);
-			PotionEffect.addCustomEffect(potion, PotionEffect.POISON, 1, 3);
-			PotionEffect.addCustomEffect(potion, PotionEffect.NIGHTVISION, 1, 120);
-			PotionEffect.addCustomEffect(potion, PotionEffect.JUMP, 3, 120);
+			PotionEffect2.addCustomEffect(potion, PotionEffect2.POISON, 1, 3);
+			PotionEffect2.addCustomEffect(potion, PotionEffect2.NIGHTVISION, 1, 120);
+			PotionEffect2.addCustomEffect(potion, PotionEffect2.JUMP, 3, 120);
 			Loot.setItemName(potion, "Absinthe");
 			ItemHideFlags.set(ItemHideFlags.EFFECTS, potion);
 			setColor(potion, DyeColor.RGBToColor(200, 250, 150));
@@ -68,9 +68,9 @@ public enum PotionMixture {
 			return potion;
 		case RAGE:
 			potion = Potion.getSpecific(PotionType.REGULAR, null, false, false);
-			PotionEffect.addCustomEffect(potion, PotionEffect.STRENGTH, 3, 20);
-			PotionEffect.addCustomEffect(potion, PotionEffect.BLINDNESS, 1, 10);
-			PotionEffect.addCustomEffect(potion, PotionEffect.WITHER, 1, 3);
+			PotionEffect2.addCustomEffect(potion, PotionEffect2.STRENGTH, 3, 20);
+			PotionEffect2.addCustomEffect(potion, PotionEffect2.BLINDNESS, 1, 10);
+			PotionEffect2.addCustomEffect(potion, PotionEffect2.WITHER, 1, 3);
 			Loot.setItemName(potion, "Animus");
 			Loot.setItemLore(potion, "An unstable mixture.");
 			ItemHideFlags.set(ItemHideFlags.EFFECTS, potion);
@@ -78,10 +78,10 @@ public enum PotionMixture {
 			return potion;
 		case STAMINA:
 			potion = Potion.getSpecific(PotionType.REGULAR, null, false, false);
-			PotionEffect.addCustomEffect(potion, PotionEffect.SATURATION, 10, 1);
-			PotionEffect.addCustomEffect(potion, PotionEffect.SPEED, 2, 120);
-			PotionEffect.addCustomEffect(potion, PotionEffect.HASTE, 2, 120);
-			PotionEffect.addCustomEffect(potion, PotionEffect.JUMP, 3, 120);
+			PotionEffect2.addCustomEffect(potion, PotionEffect2.SATURATION, 10, 1);
+			PotionEffect2.addCustomEffect(potion, PotionEffect2.SPEED, 2, 120);
+			PotionEffect2.addCustomEffect(potion, PotionEffect2.HASTE, 2, 120);
+			PotionEffect2.addCustomEffect(potion, PotionEffect2.JUMP, 3, 120);
 			Loot.setItemName(potion, "Vitae");
 			Loot.setItemLore(potion, "Essence of life.");
 			ItemHideFlags.set(ItemHideFlags.EFFECTS, potion);
@@ -89,10 +89,10 @@ public enum PotionMixture {
 			return potion;
 		case STOUT:
 			potion = Potion.getSpecific(PotionType.REGULAR, null, false, false);
-			PotionEffect.addCustomEffect(potion, PotionEffect.REGEN, 1, 5);
-			PotionEffect.addCustomEffect(potion, PotionEffect.SATURATION, 2, 1);
-			PotionEffect.addCustomEffect(potion, PotionEffect.HEALTHBOOST, 2, 120);
-			PotionEffect.addCustomEffect(potion, PotionEffect.RESISTANCE, 1, 120);
+			PotionEffect2.addCustomEffect(potion, PotionEffect2.REGEN, 1, 5);
+			PotionEffect2.addCustomEffect(potion, PotionEffect2.SATURATION, 2, 1);
+			PotionEffect2.addCustomEffect(potion, PotionEffect2.HEALTHBOOST, 2, 120);
+			PotionEffect2.addCustomEffect(potion, PotionEffect2.RESISTANCE, 1, 120);
 			Loot.setItemName(potion, "Stout");
 			Loot.setItemLore(potion, "\"It's Good for You\"");
 			ItemHideFlags.set(ItemHideFlags.EFFECTS, potion);
@@ -100,9 +100,9 @@ public enum PotionMixture {
 			return potion;
 		case NECTAR:
 			potion = Potion.getSpecific(PotionType.REGULAR, null, false, false);
-			PotionEffect.addCustomEffect(potion, PotionEffect.ABSORPTION, 10, 20);
-			PotionEffect.addCustomEffect(potion, PotionEffect.RESISTANCE, 3, 20);
-			PotionEffect.addCustomEffect(potion, PotionEffect.HEALTH, 2, 1);
+			PotionEffect2.addCustomEffect(potion, PotionEffect2.ABSORPTION, 10, 20);
+			PotionEffect2.addCustomEffect(potion, PotionEffect2.RESISTANCE, 3, 20);
+			PotionEffect2.addCustomEffect(potion, PotionEffect2.HEALTH, 2, 1);
 			Loot.setItemName(potion, "Nectar");
 			Loot.setItemLore(potion, "A Floral extract.");
 			ItemHideFlags.set(ItemHideFlags.EFFECTS, potion);
@@ -110,8 +110,8 @@ public enum PotionMixture {
 			return potion;
 		case COFFEE:
 			potion = Potion.getSpecific(PotionType.REGULAR, null, false, false);
-			PotionEffect.addCustomEffect(potion, PotionEffect.HASTE, 2, 600);
-			PotionEffect.addCustomEffect(potion, PotionEffect.SPEED, 1, 600);
+			PotionEffect2.addCustomEffect(potion, PotionEffect2.HASTE, 2, 600);
+			PotionEffect2.addCustomEffect(potion, PotionEffect2.SPEED, 1, 600);
 			Loot.setItemName(potion, "Coffee");
 			Loot.setItemLore(potion, "A darkroast bean brew.");
 			ItemHideFlags.set(ItemHideFlags.EFFECTS, potion);
@@ -119,7 +119,7 @@ public enum PotionMixture {
 			return potion;
 		case AURA:
 			potion = Potion.getSpecific(PotionType.REGULAR, null, false, false);
-			PotionEffect.addCustomEffect(potion, PotionEffect.GLOWING, 1, 20*60);
+			PotionEffect2.addCustomEffect(potion, PotionEffect2.GLOWING, 1, 20*60);
 			Loot.setItemName(potion, "Luma");
 			Loot.setItemLore(potion, "A glowstone extract.");
 			ItemHideFlags.set(ItemHideFlags.EFFECTS, potion);
@@ -149,12 +149,12 @@ public enum PotionMixture {
 	
 	public static void addRandomEffects(Random rand, ItemStack potion, int numEffects){
 		
-		List<PotionEffect> effects = new ArrayList<PotionEffect>(Arrays.asList(PotionEffect.values()));
+		List<PotionEffect2> effects = new ArrayList<PotionEffect2>(Arrays.asList(PotionEffect2.values()));
 		Collections.shuffle(effects, rand);
 		
 		for(int i = 0; i < numEffects; ++i){
 			
-			PotionEffect type = effects.get(i);
+			PotionEffect2 type = effects.get(i);
 			int duration;
 			switch(type){
 			case SATURATION:
@@ -167,7 +167,7 @@ public enum PotionMixture {
 			default: duration = 60 + rand.nextInt(120);
 			}
 			
-			PotionEffect.addCustomEffect(potion, type, rand.nextInt(3), duration);
+			PotionEffect2.addCustomEffect(potion, type, rand.nextInt(3), duration);
 		}	
 	}
 	

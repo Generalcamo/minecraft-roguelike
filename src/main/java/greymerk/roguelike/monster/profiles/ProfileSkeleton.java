@@ -23,6 +23,11 @@ public class ProfileSkeleton implements IMonsterProfile{
 			MonsterProfile.get(MonsterProfile.MAGICARCHER).addEquipment(world, rand, level, mob);
 			return;
 		}
+
+		if(level > 2 && rand.nextInt(50) == 0){
+			MonsterProfile.get(MonsterProfile.ASHEN).addEquipment(world, rand, level, mob);
+			return;
+		}
 		
 		if(level > 1 && rand.nextInt(10) == 0){
 			MonsterProfile.get(MonsterProfile.WITHER).addEquipment(world, rand, level, mob);
